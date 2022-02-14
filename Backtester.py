@@ -17,9 +17,9 @@ cerebro = bt.Cerebro() #backtrader's main engine for your program. This comes wi
 cerebro.broker.setcash(10000) #Starting with US$10000 
 cerebro.addstrategy(SmaCross) #adding the strategy to the engine.
 
-data = bt.feeds.YahooFinanceCSVData(dataname="BTC-USD.csv", fromdate=datetime(2015, 1, 1), todate=datetime(2022, 2, 13)) 
+data = bt.feeds.YahooFinanceCSVData(dataname="GOOG.csv", fromdate=datetime(2012, 1, 1), todate=datetime(2022, 2, 13)) 
 #the line above is how we give the script market history data, from a CSV file. ^Here we are defining the range
-#of dates that we will pass. For instance, above I used the range from the 1st of Jan 2015 to the 13th of Feb 2022.
+#of dates that we will pass. For instance, above I used the range from the 1st of Jan 2012 to the 13th of Feb 2022.
 
 cerebro.adddata(data) #injecting the market history data to cerebro (the engine)
 cerebro.addsizer(bt.sizers.AllInSizer, percents=95) #without this line, the program would only buy one share
